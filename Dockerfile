@@ -1,5 +1,5 @@
 # Utiliser une image de base officielle de Java
-FROM openjdk:17-jdk-alpine
+FROM openjdk:19-jdk
 
 # Ajouter un argument pour définir le nom du fichier jar
 ARG JAR_FILE=target/*.jar
