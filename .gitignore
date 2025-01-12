@@ -1,11 +1,14 @@
 HELP.md
 target/
-.xcrud/
-
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+/target/*
 !/target/*.jar
+.xcrud/
+!**/src/main/**/target/*.jar
+!**/src/test/**/target/*.jar
+*.log
+*.class
+
 
 ### STS ###
 .apt_generated
