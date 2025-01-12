@@ -1,5 +1,5 @@
 # Utiliser une image JDK de base avec la version 19.0.2
-FROM openjdk:19.0.2-jdk
+FROM openjdk:19-jdk
 
 # Installer Maven
 RUN apt-get update && apt-get install -y maven
