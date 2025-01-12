@@ -1,6 +1,7 @@
 HELP.md
 target/
 .xcrud/
+!/target/*.jar
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
