@@ -22,7 +22,7 @@ jobs:
           java-version: '19'
           java-package: jdk
           architecture: x64
-          distribution: 'adoptopenjdk'
+          distribution: 'adoptium'  # Remplacer 'adoptopenjdk' par 'adoptium'
           check-latest: false
           
       - name: Build with Maven
