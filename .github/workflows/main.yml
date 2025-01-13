@@ -28,7 +28,7 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        IMAGE_TAG=my-springboot-app:${GITHUB_SHA}
+        IMAGE_TAG=madamovie:${GITHUB_SHA}
         docker build . --file Dockerfile --tag $IMAGE_TAG
 
     - name: Log in to Docker Hub
@@ -39,8 +39,8 @@ jobs:
 
     - name: Push Docker image to Docker Hub
       run: |
-        IMAGE_TAG=my-springboot-app:${GITHUB_SHA}
-        docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/my-springboot-app:${GITHUB_SHA}
-        docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/my-springboot-app:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-springboot-app:${GITHUB_SHA}
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-springboot-app:latest
+        IMAGE_TAG=madamovie:${GITHUB_SHA}
+        docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/madamovie:${GITHUB_SHA}
+        docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/madamovie:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/madamovie:${GITHUB_SHA}
+        docker push ${{ secrets.DOCKER_USERNAME }}/madamovie:latest
