@@ -35,7 +35,6 @@ public class WebConfig {
                 .cors()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/bouquet/all").permitAll()
                 .requestMatchers("/client/auth/login").permitAll()
                 .requestMatchers("/compte/auth/client").permitAll()
                 .requestMatchers("film/stream/{id}/{token}").permitAll()
