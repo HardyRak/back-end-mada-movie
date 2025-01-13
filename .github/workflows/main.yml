@@ -27,7 +27,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-springboot-app:$(date +%s)
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
@@ -37,5 +37,5 @@ jobs:
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker tag madamovie:$(date +%s) ${{ secrets.DOCKER_USERNAME }}/madamovie:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/madamovie:latest
+        docker tag my-springboot-app:$(date +%s) ${{ secrets.DOCKER_USERNAME }}/my-springboot-app:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/my-springboot-app:latest
